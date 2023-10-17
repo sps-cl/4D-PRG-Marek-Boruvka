@@ -1,1 +1,1 @@
-# 4D-PRG-Marek-Boruvka.
+# 4D-PRG-Marek-Boruvka
