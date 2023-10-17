@@ -45,12 +45,12 @@
   <ItemGroup>
     <Compile Include="Cactus.cs" />
     <Compile Include="CircleCollider.cs" />
-    <Compile Include="Collider..cs" />
-    <Compile Include="CollisionDetection..cs" />
+    <Compile Include="Collider.cs" />
+    <Compile Include="CollisionDetection.cs" />
     <Compile Include="GameObject.cs" />
-    <Compile Include="IDrawable..cs" />
+    <Compile Include="IDrawable.cs" />
     <Compile Include="Image.cs" />
-    <Compile Include="IMoveable..cs" />
+    <Compile Include="IMoveable.cs" />
     <Compile Include="Meteor.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />

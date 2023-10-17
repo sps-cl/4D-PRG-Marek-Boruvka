@@ -31,13 +31,13 @@ namespace Hlavni_Program
             while (Console.KeyAvailable == true)
             {
                 ConsoleKeyInfo key = Console.ReadKey(true);
-                if (key.KeyChar.Equals("w"))
+                if (key.KeyChar.Equals('w'))
                 {
                     _jump = 5;
                 }
-                else 
+                else
                 {
-                    if (key.KeyChar.Equals("s"))
+                    if (key.KeyChar.Equals('s'))
                     {
                         _crouch = 5;
                     }
@@ -64,6 +64,12 @@ namespace Hlavni_Program
                 return cactus;
             }
         }
+
+        static void Create()
+        {
+
+        }
+
         static void Main(string[] args)
         {
             Vector minBounds = new Vector(0, 0);
@@ -108,16 +114,46 @@ namespace Hlavni_Program
                 }
                 obstacle1.Move();
                 obstacle2.Move();
+                player.Move();
 
                 scene.Draw(player, obstacle1, obstacle2);
 
-                if (player.CollideWith(obstacle1) == true || player.CollideWith(obstacle2) == true)
+                if (player.CollideWith(obstacle1) || player.CollideWith(obstacle2))
                 {
-                    break;
+                    Console.WriteLine("Chceš začít znova? (ano/ne)");
+                    string response = Console.ReadLine();
+                    if (response.ToLower() != "ano")
+                    {
+                        break;
+                    }
+
+                    minBounds = new Vector(0, 0);
+                    maxBounds = new Vector(_sceneWidth, _sceneHeight);
+
+                    player.MinBounds = minBounds;
+                    player.MaxBounds = maxBounds;
+                    obstacle1 = RandomObstacle(minBounds, maxBounds, _sceneWidth);
+                    onObstacle1Destroy = null;
+                    onObstacle1Destroy = () =>
+                    {
+                        obstacle1 = RandomObstacle(minBounds, maxBounds, _sceneWidth);
+                        obstacle1.OnDestroy = onObstacle1Destroy;
+                    };
+                    obstacle1.OnDestroy = onObstacle1Destroy;
+                    obstacle2 = RandomObstacle(minBounds, maxBounds, (int)(_sceneWidth * 1.5));
+                    onObstacle2Destroy = null;
+                    onObstacle2Destroy = () =>
+                    {
+                        obstacle2 = RandomObstacle(minBounds, maxBounds, _sceneWidth);
+                        obstacle2.OnDestroy = onObstacle2Destroy;
+                    };
+                    obstacle2.OnDestroy = onObstacle2Destroy;
+
+                    score = -1;
                 }
 
                 score++;
-                Console.WriteLine(score);
+                Console.WriteLine("Skóre: " + score);
                 Thread.Sleep(100);
             }
         }

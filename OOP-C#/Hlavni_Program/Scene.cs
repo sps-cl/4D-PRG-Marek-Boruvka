@@ -47,6 +47,7 @@ namespace Hlavni_Program
                 {
                     stringBuilder.Append(_scene[i, j]);
                 }
+                stringBuilder.Append("\n");
             }
             Console.Write(stringBuilder.ToString());
         }
