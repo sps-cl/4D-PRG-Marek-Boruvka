@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cz">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML</title>
+        <link rel="icon" href="icon.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Opakovani HTML</h1>
+        <p>Lorem <br> ipsum dolor &nbsp;&nbsp;&nbsp;sit amet, <b>consectetur</b> consectetur <i>adipisicing</i> 4<sup>2</sup> R<sub>1</sub> &nbsp;elit. Ex eveniet&nbsp; sunt expedita est eos exercitationem ipsa, libero et pariatur neque porro eum totam aperiam beatae laboriosam repellat vel quisquam assumenda.</p>
+        <a href="kontakty.html">kontakty</a>
+        <img src="aqua.png" width="300" height="100" alt="obrazak" title="obrazak">
+        <table> 
+            <thead>
+                <tr>
+                    <th>1 ggg</th>
+                    <th>2 ggg</th>
+                    <th>3 ggg</th>
+                    <th>4 ggg</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td colspan="4">1</td>
+                </tr>
+                <tr>
+                    <td colspan="2">1</td>
+                    <td colspan="2">2</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <input type="button" value="Tlacitko" onclick="alert(Number(document.getElementById('vstup1')) + Number(document.getElementById('vstup2')))">
+        <input id="vstup1" type="number" value="1" onchange="alert(this.value)">
+        <input id="vstup2" type="number" value="1" onchange="alert(this.value)">
+    </body>
+</html>
