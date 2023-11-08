@@ -1,0 +1,26 @@
+h1{
+    background-color: blanchedalmond;
+    font-size: 7vw;
+    width: fit-content;
+}
+
+.div1{
+    width: 50%;
+    border: 3px dashed black;
+    padding: 3em 4em 5em 2em;
+    margin: 0.5em 1em 1.5em 2em;
+    text-align: justify;
+}
+
+img{
+    display: block;
+    margin: auto auto auto auto;
+}
+
+.div2{
+    display: flex;
+}
+
+.div2 p {
+    border: 3px dashed black;
+}

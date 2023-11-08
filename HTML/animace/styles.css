@@ -1,0 +1,103 @@
+.container{
+    margin: 2rem 2rem;
+}
+
+#sizeAnim{
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation-name: sizeAnimation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes sizeAnimation{
+    0%{background: red;}
+    50%{background: green;}
+    100% {width: 400px; background: blue;}
+}
+
+#posAnim{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: green;
+    border-radius: 25px;
+    left: 0;
+    animation-name: posAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes posAnimation {
+    0%{left: 0px;}
+    100%{left: 400px; -webkit-transform: rotate(360deg);}
+}
+
+#colorAnim{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: blue;
+    animation-name: colorAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes colorAnimation {
+    0%{background: blue;}
+    50%{background: red;}
+    100%{background: green;}
+}
+
+
+#sizeTransition{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: yellow;
+    transition: width 2s, height 2s;
+}
+
+#sizeTransition:hover{
+    width: 200px;
+    height: 400px;
+}
+
+
+#posTransition{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    background: purple;
+    transition: left 3s;
+}
+
+#posTransition:active{
+    left: 200px;
+}
+
+#transformTransition{
+    width: 50px;
+    height: 100px;
+    border-radius: 10px;
+    background: darkblue;
+    animation-name: transformTransition;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes transformTransition {
+    0%{-webkit-transform: rotate(360deg);}
+}
+
+#transformTransition:hover{
+    transform: rotate(360deg);
+}
