@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th, td {
+            border:1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+    <script src="script.js"></script>
+    <input type="text" id="city">
+    <button type="button" onclick="addCity()">Klikni</button><br>
+
+    <div>
+        <table class="tabulka">
+            <tr>
+                <th colspan="4"><img id="obrazky" src="Obrazky-pocasi/otaznik.png" height="150" width="150"></th>
+            </tr>
+            <tr>
+                <td>Teplota</td>
+                <td>Cas</td>
+                <td>Vhlkost</td>
+                <td>Rychlost větru</td>
+            </tr>
+            <tr>
+                <td id="temperature"></td>
+                <td id="time"></td>
+                <td id="humidity"></td>
+                <td id="windspeed"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
